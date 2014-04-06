@@ -1,6 +1,6 @@
 # proudsourcing-ioncubeloader
 
-Puppet module to install Ioncube Loader for PHP 5.3 (apache-linux-x64).
+Puppet module to install Ioncube Loader for PHP 5.3 / PHP 5.4 / PHP 5.5 (apache-linux-x64).
 
 
 ## Usage
@@ -8,21 +8,21 @@ Puppet module to install Ioncube Loader for PHP 5.3 (apache-linux-x64).
 	class { 'ps_ioncubeloader':	}
 
 
-## Configuration
-
-You can define apache modules and php conf.d directory:
+## Configuration example
 
 	class { 'ps_ioncubeloader':
-		apache_modules_dir	=> "",
-		apache_php_dir		=> ""
+		php_version			=> "php53",
+		php_priority		=> "10"
 	}
 
 
 Default values:
 
+	$module_status			= present
     $apache_modules_dir		= '/etc/apache2/modules/'
     $apache_php_dir			= '/etc/php5/apache2/'
-
+    $php_version			= 'php54'
+    $php_priority			= '5'
 
 
 ## License
@@ -43,5 +43,6 @@ Default values:
 
 ## Copyright
 
-	Proud Sourcing GmbH 2013
-	www.proudsourcing.de / www.proudcommerce.com
+	Proud Sourcing GmbH 2014
+	www.proudsourcing.de
+	
