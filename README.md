@@ -18,11 +18,12 @@ Puppet module to install Ioncube Loader for PHP 5.3 / PHP 5.4 / PHP 5.5 (apache-
 
 Default values:
 
-	$module_status			= present
-    $apache_modules_dir		= '/etc/apache2/modules/'
-    $apache_php_dir			= '/etc/php5/apache2/'
-    $php_version			= 'php54'
-    $php_priority			= '5'
+	$module_status			   = present
+    $apache_modules_dir_parent = '/etc/apache2/modules/'
+    $apache_modules_dir		   = '/etc/apache2/modules/icl'
+    $apache_php_dir			   = '/etc/php5/apache2/'
+    $php_version			   = 'php54'
+    $php_priority			   = '5'
 
 
 ## License
