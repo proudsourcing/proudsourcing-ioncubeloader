@@ -1,14 +1,20 @@
 class ps_ioncubeloader (
 
-	$module_status		= $ps_ioncubeloader::params::module_status,
-	$apache_modules_dir	= $ps_ioncubeloader::params::apache_modules_dir,
-	$apache_php_dir		= $ps_ioncubeloader::params::apache_php_dir,
-	$php_version		= $ps_ioncubeloader::params::php_version,
-	$php_priority		= $ps_ioncubeloader::params::php_priority,
+	$module_status				= $ps_ioncubeloader::params::module_status,
+	$apache_modules_dir_parent	= $ps_ioncubeloader::params::apache_modules_dir_parent,
+	$apache_modules_dir			= $ps_ioncubeloader::params::apache_modules_dir,
+	$apache_php_dir				= $ps_ioncubeloader::params::apache_php_dir,
+	$php_version				= $ps_ioncubeloader::params::php_version,
+	$php_priority				= $ps_ioncubeloader::params::php_priority,
 
 ) inherits ps_ioncubeloader::params {
 
-	file { "${apache_modules_dir}":
+	file { "${apache_modules_dir_parent}":
+		ensure => directory,
+		mode   => 750,
+		owner  => "root",
+	}
+	->file { "${apache_modules_dir}":
 		ensure => 'directory',
 		mode => 750,
 		owner => 'root',
