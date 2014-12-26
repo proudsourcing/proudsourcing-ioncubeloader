@@ -32,6 +32,3 @@ class ps_ioncubeloader::params
   # http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_lin_x86.tar.gz
   $archive_file = "ioncube_loaders_lin_x86${package_suffix}.tar.gz"
 }
-
-
-http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_lin_x86-64.tar.gz
