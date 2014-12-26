@@ -9,13 +9,8 @@ class ps_ioncubeloader (
 	$php_priority				= $ps_ioncubeloader::params::php_priority,
 
 ) inherits ps_ioncubeloader::params {
-
-	file { "${apache_modules_dir_parent}":
-		ensure => directory,
-		mode   => 750,
-		owner  => "root",
-	}
-	->file { "${apache_modules_dir}":
+	
+	file { "${apache_modules_dir}":
 		ensure => 'directory',
 		mode => 750,
 		owner => 'root',
