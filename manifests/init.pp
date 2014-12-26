@@ -34,7 +34,7 @@ class ps_ioncubeloader (
 
 	exec { 'retrieve_ioncubeloader':
       cwd     => '/tmp',
-      command => "wget ${$ioncube_server}${ioncube_archive} && tar xzf ${ioncube_archive} && mv ioncube/* ${apache_modules_dir} && touch ${apache_modules_dir}/ioncube/.installed",
+      command => "wget ${$ioncube_server}${archive_file} && tar xzf ${archive_file} && mv ioncube/* ${apache_modules_dir} && touch ${apache_modules_dir}/ioncube/.installed",
       creates => "${apache_modules_dir}/.installed"
   }
 	
