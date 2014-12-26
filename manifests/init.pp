@@ -37,7 +37,7 @@ class ps_ioncubeloader (
 	exec { "apache_restart-icl":
   	command => "/etc/init.d/apache2 reload",
 		refreshonly => true,
-  	subscribe => File["${apache_php_dir}conf.d/${php_priority}-ps_ioncubeloader.ini"],
+  	subscribe => File["${apache_php_dir}${php_priority}-ps_ioncubeloader.ini"],
 	}
 
 }
