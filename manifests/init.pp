@@ -21,12 +21,6 @@ class ps_ioncubeloader (
 		owner => 'root',
 	}
 	
-	file { "${apache_modules_dir}ioncube_loader_lin_${php_version}.so":
-		ensure => $module_status,
-    source => "puppet:///modules/ps_ioncubeloader/ioncube_loader_lin_${php_version}.so",
-    subscribe => File["${apache_modules_dir}"]
-	}
-	
 	file { "${apache_php_dir}${php_priority}-ps_ioncubeloader.ini":
 		ensure => $module_status,
     content => template("ps_ioncubeloader/ps_ioncubeloader.ini.erb"),
