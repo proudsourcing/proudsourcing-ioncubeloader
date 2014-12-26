@@ -8,7 +8,7 @@ class ps_ioncubeloader::params
     $php_version				= 'php54'
     $php_priority				= '05'
   }
-  elsif elsif $::osfamily == 'Gentoo' {
+  elsif $::osfamily == 'Gentoo' {
     $module_status        = present
     $apache_modules_dir_parent  = '/opt/ioncube/'
     $apache_modules_dir     = '/opt/ioncube/'
