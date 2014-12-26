@@ -13,8 +13,8 @@ class ps_ioncubeloader::params
     $apache_modules_dir_parent  = '/opt/ioncube/'
     $apache_modules_dir     = '/opt/ioncube/'
     $php_version        = 'php5.5'
-    $apache_php_dir       = "/etc/php5/apache2-${php_version}/ext/"
-    $apache_php_dir_active       = "/etc/php5/apache2-${php_version}/ext-active/"
+    $apache_php_dir       = "/etc/php/apache2-${php_version}/ext/"
+    $apache_php_dir_active       = "/etc/php/apache2-${php_version}/ext-active/"
     $php_priority       = '05'
   }
   else {
