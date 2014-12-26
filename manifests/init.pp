@@ -10,6 +10,10 @@ class ps_ioncubeloader (
 
 ) inherits ps_ioncubeloader::params {
 
+	Exec {
+    path => ['/bin', '/usr/bin']
+  }
+
 	file { "${apache_modules_dir}":
 		ensure => 'directory',
 		mode => 750,
