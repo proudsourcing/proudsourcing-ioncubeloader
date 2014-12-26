@@ -9,7 +9,7 @@ class ps_ioncubeloader (
 	$php_priority				= $ps_ioncubeloader::params::php_priority,
 
 ) inherits ps_ioncubeloader::params {
-	
+
 	file { "${apache_modules_dir}":
 		ensure => 'directory',
 		mode => 750,
@@ -19,7 +19,6 @@ class ps_ioncubeloader (
 	file { "${apache_php_dir}${php_priority}-ps_ioncubeloader.ini":
 		ensure => $module_status,
     content => template("ps_ioncubeloader/ps_ioncubeloader.ini.erb"),
-    subscribe => File["${apache_modules_dir}ioncube_loader_lin_${php_version}.so"]
 	}
 
 	if $::osfamily == 'Gentoo' {
