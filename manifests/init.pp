@@ -6,6 +6,7 @@ class ps_ioncubeloader (
 	$apache_php_dir				= $ps_ioncubeloader::params::apache_php_dir,
 	$apache_php_dir_active 	= $ps_ioncubeloader::params::apache_php_dir_active,
 	$php_version				= $ps_ioncubeloader::params::php_version,
+	$php_ioncube_version				= $ps_ioncubeloader::params::php_ioncube_version,
 	$php_priority				= $ps_ioncubeloader::params::php_priority,
 
 ) inherits ps_ioncubeloader::params {

@@ -6,6 +6,7 @@ class ps_ioncubeloader::params
     $apache_modules_dir			= '/etc/apache2/modules/icl/'
     $apache_php_dir				= '/etc/php5/apache2/conf.d/'
     $php_version				= 'php54'
+    $php_ioncube_version  = '5.4'
     $php_priority				= '05'
   }
   elsif $::osfamily == 'Gentoo' {
@@ -13,6 +14,7 @@ class ps_ioncubeloader::params
     $apache_modules_dir_parent  = '/opt/ioncube/'
     $apache_modules_dir     = '/opt/ioncube/'
     $php_version        = 'php5.5'
+    $php_ioncube_version  = '5.5'
     $apache_php_dir       = "/etc/php/apache2-${php_version}/ext/"
     $apache_php_dir_active       = "/etc/php/apache2-${php_version}/ext-active/"
     $php_priority       = '05'
